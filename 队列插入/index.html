@@ -16,12 +16,14 @@
     <br>
     将变量 b(5) 插入 数组 a 的第 c(3) 个位置 
     <br>
-    得到数组 a = [1, 3, 0, 5, 2, 4, 5, 6, 1, 213, 325, 6]
+    得到数组
+    <span id="new_array"></span> 
   </h4>
   <script>
     const a = [1, 3, 0, 2, 4, 5, 6, 1, 213, 325, 6]
     const b = 5
     const c = 3
+    const newArray = document.getElementById('new_array')
     // 使 b 插入 a 数组中的第三个位置
     ;(function() {
       if (c >= a.length) {
@@ -32,7 +34,8 @@
         a[i+1] = a[i]
       }
       a[c] = b
-      console.log(a)
+      console.log('[' + a + ']')
+      newArray.innerHTML = '[' + a + ']'
     })()
   </script>
 </body>

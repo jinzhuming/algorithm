@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>数组去重</title>
+</head>
+<body>
+<script>
+  const arr = [1, 1, 5, 3, 3, 99, 27, 5, 7]
+
+  // 1. 遍历数组
+  const unique1 = (arr)=> {
+
+    // 构建一个新的临时数组
+    const newArr = []
+
+    // 取出数组所有 value
+    for (let value of arr) {
+
+      // 存储是否重复状态，默认不重复
+      let state = false
+
+      // 取出所有临时数组元素和当前元素对比，判断是否重复
+      for (let newArrVal of newArr) {
+        if (value === newArrVal) {
+          // 重复
+          state = true
+          break
+        }
+      }
+
+      // 没有重复则添加进临时数组
+      if (!state) {
+        newArr.push(value)
+      }
+    }
+    return newArr
+  }
+  console.log(unique1(arr))
+
+  /*
+  2. indexOf
+
+  indexOf() 方法可返回某个指定的字符串值在字符串中首次出现的位置。
+  如果没有，则返回 -1，借此可以判断数组中是否有当前元素，若返回不是 -1 则代表有当前元素。
+  */
+  const unique2 = (arr) => {
+
+    // 建立临时数组
+    const newArr = []
+
+    // 遍历取出元素
+    for (let value of arr) {
+
+      // 利用 indexof 判断新数组内是否拥有当前元素
+      if (newArr.indexOf(value) < 0) {
+        newArr.push(value)
+      }
+    }
+    return newArr
+  }
+
+  console.log(unique2(arr))
+
+  /*
+  2. set
+
+    Array.from() 是 es6 新增方法，用于将对象转化为真正的数组
+    Set 用来生成一个新的数据结构，他的元素都是非重复的
+    
+  */
+  const unique3 = (arr) => {
+    return Array.from(new Set(arr))
+  }
+
+  console.log(unique3(arr))
+</script>
+</body>
+</html>

@@ -10,5 +10,7 @@
 ------
 
 ### 目录
-* [冒泡排序](https://github.com/jinzhuming/Algorithm/blob/master/BOOK/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F.md)
-* [数组去重](https://github.com/jinzhuming/algorithm/blob/master/BOOK/%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D.md)
+* [冒泡排序](https://github.com/jinzhuming/Algorithm/blob/master/BOOK/冒泡排序.md)
+* [快速排序](https://github.com/jinzhuming/algorithm/blob/master/BOOK/快速排序.md)
+* [二分查找](https://github.com/jinzhuming/algorithm/blob/master/BOOK/二分查找.md)
+* [数组去重](https://github.com/jinzhuming/algorithm/blob/master/BOOK/数组去重.md)

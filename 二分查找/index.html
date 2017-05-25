@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h4 style="width: 400px;display:block;margin: 0 auto;">
+    有数组 a = [1, 2, 3, 4, 4, 5, 6, 6, 7, 8, 9, 10, 11]
+    执行二分查找，寻找数字 9 所在的位置
+    <br>
+    得到 8 
+    <br>
+    a[9] === 9
+  </h4>
+
+  <script>
+    const a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    
+    Array.prototype.binarySearch = function(low, high, khey) {
+      if (low > high) {
+        return -1
+      }
+
+      const mid = parseInt((high + low) / 2)
+
+      if (this[mid] > khey) { 
+        return this.binarySearch(low, mid - 1, khey)
+      }
+
+      if (this[mid] < khey) {
+        return this.binarySearch(mid + 1, high, khey)
+      }
+
+      return mid
+    }
+
+    a.binarySearch(0, a.length -1, 9)
+  </script>
+</body>
+</html>

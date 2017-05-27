@@ -28,7 +28,7 @@
 
       const left = []
       const right = []
-      const mid = [this[0]]
+      const mid = this.splice(0, 1)
 
       for (let key of this) {
         if (key < mid[0]) {

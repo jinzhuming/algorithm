@@ -14,3 +14,4 @@
 * [快速排序](https://github.com/jinzhuming/algorithm/blob/master/BOOK/快速排序.md)
 * [二分查找](https://github.com/jinzhuming/algorithm/blob/master/BOOK/二分查找.md)
 * [数组去重](https://github.com/jinzhuming/algorithm/blob/master/BOOK/数组去重.md)
+* [插入排序](https://github.com/jinzhuming/algorithm/blob/master/BOOK/插入排序.md)

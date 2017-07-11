@@ -61,4 +61,4 @@ return Array.from(new Set(arr))
 2. 使用 Set 转化为没有重复的新结构
 -----
 
-详细代码地址为 [数组去重](https://github.com/jinzhuming/algorithm/blob/master/数组去重/index.html)
+详细代码地址为 [数组去重](https://github.com/jinzhuming/algorithm/blob/master/arrayToRepeat/index.html)

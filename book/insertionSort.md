@@ -44,4 +44,4 @@ let a = [0, 1, 1, 3, 2, 11, 4, 3, 7]
     a = a.insertionSort() 
 ```
 
-详细代码地址为 [插入排序](https://github.com/jinzhuming/Algorithm/blob/master/插入排序/index.html/)
+详细代码地址为 [插入排序](https://github.com/jinzhuming/Algorithm/blob/master/insertionSort/index.html/)

@@ -60,4 +60,4 @@ let a = [1, 3, 0, 5, 4, 2]
     a = a.quickSort()
 ```
 
-详细代码地址为 [冒泡排序](https://github.com/jinzhuming/Algorithm/blob/master/快速排序/index.html/)
+详细代码地址为 [冒泡排序](https://github.com/jinzhuming/Algorithm/blob/master/quickSort/index.html/)

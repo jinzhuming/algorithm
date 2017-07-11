@@ -51,4 +51,4 @@ bubbleSort(a)
 
 >冒泡排序除了它迷人的名字和导致了某些有趣的理论问题这一事实之外，似乎没有什么值得推荐的。         ——Donald E.Knuth
 
-详细代码地址为 [冒泡排序](https://github.com/jinzhuming/Algorithm/blob/master/冒泡排序/index.html/)
+详细代码地址为 [冒泡排序](https://github.com/jinzhuming/Algorithm/blob/master/bubbleSort/index.html/)

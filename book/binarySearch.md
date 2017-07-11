@@ -64,4 +64,4 @@ Array.prototype.binarySearch = function(low, high, khey) {
 
 a.binarySearch(0, a.length - 1, 9) // 8
 ```
-详细代码地址为 [冒泡排序](https://github.com/jinzhuming/Algorithm/blob/master/二分查找/index.html/)
+详细代码地址为 [冒泡排序](https://github.com/jinzhuming/Algorithm/blob/master/binarySearch/index.html/)

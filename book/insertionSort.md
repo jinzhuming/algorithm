@@ -25,23 +25,23 @@
 ---
 
 ```
-let a = [0, 1, 1, 3, 2, 11, 4, 3, 7]
+  let a = [0, 1, 1, 3, 2, 11, 4, 3, 7]
 
-    Array.prototype.insertionSort = function() {
-      // 遍历数组
-      for (let i = 1; i < this.length; i += 1) {
-        // 构建一个未排序序列，遍历已排序序列，判断大小找到应该插入的位置。
-        for (let j = 0; j < i; j += 1) {
-          if(this[j] > this[i]) {
-            this.splice(j, 0, this[i])
-            this.splice(i + 1, 1)
-          }
+  Array.prototype.insertionSort = function() {
+    // 遍历数组
+    for (let i = 1; i < this.length; i += 1) {
+      // 构建一个未排序序列，遍历已排序序列，判断大小找到应该插入的位置。
+      for (let j = 0; j < i; j += 1) {
+        if(this[j] > this[i]) {
+          this.splice(j, 0, this[i])
+          this.splice(i + 1, 1)
         }
       }
-      return this
     }
+    return this
+  }
 
-    a = a.insertionSort() 
+  a = a.insertionSort() 
 ```
 
 详细代码地址为 [插入排序](https://github.com/jinzhuming/Algorithm/blob/master/insertionSort/index.html/)

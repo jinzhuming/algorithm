@@ -44,24 +44,24 @@ O(log1)虽以递归形式定义，但是尾递归，可改写为循环。
 const a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 
 // 给 Array 添加二分查找方法
-Array.prototype.binarySearch = function(low, high, khey) {
-      if (low > high) {
-        return -1
-      }
-
-      const mid = parseInt((high + low) / 2)
-
-      if (this[mid] > khey) { 
-        return this.binarySearch(low, mid - 1, khey)
-      }
-
-      if (this[mid] < khey) {
-        return this.binarySearch(mid + 1, high, khey)
-      }
-      
-      return mid
+  Array.prototype.binarySearch = function(low, high, khey) {
+    if (low > high) {
+      return -1
     }
 
-a.binarySearch(0, a.length - 1, 9) // 8
+    const mid = parseInt((high + low) / 2)
+
+    if (this[mid] > khey) { 
+      return this.binarySearch(low, mid - 1, khey)
+    }
+
+    if (this[mid] < khey) {
+      return this.binarySearch(mid + 1, high, khey)
+    }
+    
+    return mid
+  }
+
+  a.binarySearch(0, a.length - 1, 9) // 8
 ```
 详细代码地址为 [冒泡排序](https://github.com/jinzhuming/Algorithm/blob/master/binarySearch/index.html/)

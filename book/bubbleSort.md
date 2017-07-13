@@ -18,34 +18,34 @@
 **伪代码**:
 ```
 // 确定数组
-const a = [1, 3, 0, 2, 4, 5, 6, 1, 213, 325, 6]
+  const a = [1, 3, 0, 2, 4, 5, 6, 1, 213, 325, 6]
 
-const bubbleSort = (arr)=> {
+  const bubbleSort = (arr)=> {
 
-  // 获取数组个数
-  const length = arr.length
+    // 获取数组个数
+    const length = arr.length
 
-  // 一共执行 i = length - 1 次排序
-  for (let i = 0; i < length; i++) {
-    
-    // 扣除掉每轮不需要比较的数组（第一轮倒数第一个，第二轮倒数第二个，第三轮...）
-    for (let n = 0; n < length - 1 - i; n++) {
+    // 一共执行 i = length - 1 次排序
+    for (let i = 0; i < length; i++) {
+      
+      // 扣除掉每轮不需要比较的数组（第一轮倒数第一个，第二轮倒数第二个，第三轮...）
+      for (let n = 0; n < length - 1 - i; n++) {
 
-      // 如果前面比后面大，调换位置，用了 es 6 解构赋值语法。 
-      if (arr[n] > arr[n+1]) {
-        [arr[n], arr[n + 1]] = [arr[n + 1], arr[n]]
-        /*
-         * 不采用解构赋值语法
-         * var small = arr[n + 1]
-         * arr[n + 1] = arr[n]
-         * arr[n] = small
-        */
+        // 如果前面比后面大，调换位置，用了 es 6 解构赋值语法。 
+        if (arr[n] > arr[n+1]) {
+          [arr[n], arr[n + 1]] = [arr[n + 1], arr[n]]
+          /*
+          * 不采用解构赋值语法
+          * var small = arr[n + 1]
+          * arr[n + 1] = arr[n]
+          * arr[n] = small
+          */
+        }
       }
     }
+    return a
   }
-  return a
-}
-bubbleSort(a)
+  bubbleSort(a)
 ```
 其实，只需要记住冒泡排序需要经过两次循环，两次的差别仅为第二次需要减去第一次循环获取到的变量，总体来讲还是很简单的。但是因为它是一宗比较慢的排序，实际中使用的并不多。
 

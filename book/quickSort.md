@@ -32,32 +32,32 @@
 
 代码实现
 ```
-let a = [1, 3, 0, 5, 4, 2]
+  let a = [1, 3, 0, 5, 4, 2]
 
-    Array.prototype.quickSort = function() {
-      var len = this.length
+  Array.prototype.quickSort = function() {
+    var len = this.length
 
-      if (len <= 1) {
-        return this.slice(0)
-      }
-
-      const left = []
-      const right = []
-      const mid = this.splice(0, 1)
-
-      for (let key of this) {
-        if (key < mid[0]) {
-          left.push(key)
-        }
-        if (key >= mid[0]) {
-          right.push(key)
-        }
-      }
-
-      return left.quickSort().concat(mid.concat(right.quickSort()))
+    if (len <= 1) {
+      return this.slice(0)
     }
 
-    a = a.quickSort()
+    const left = []
+    const right = []
+    const mid = this.splice(0, 1)
+
+    for (let key of this) {
+      if (key < mid[0]) {
+        left.push(key)
+      }
+      if (key >= mid[0]) {
+        right.push(key)
+      }
+    }
+
+    return left.quickSort().concat(mid.concat(right.quickSort()))
+  }
+
+  a = a.quickSort()
 ```
 
 详细代码地址为 [冒泡排序](https://github.com/jinzhuming/Algorithm/blob/master/quickSort/index.html/)

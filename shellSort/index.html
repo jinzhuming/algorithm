@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>shellSort</title>
+</head>
+<body>
+   <h4 style="width: 400px;display:block;margin: 0 auto;">
+    有数组 a = [1, 3, 0, 5, 4, 2]
+    执行希尔排序
+    <br>
+    得到 新数组:
+    <br>
+    [0, 1, 2, 3, 4, 5]
+  </h4>
+
+  <script>
+    let a = [1, 3, 0, 5, 4, 2]
+    
+    Array.prototype.shellSort = function() {
+      function swap(array, i, k) {
+        const temp = array[i]
+        array[i] = array[k]
+        array[k] = temp
+      }
+  
+      const length = this.length
+      let gap = Math.floor(length / 2)
+
+      while (gap > 0) {
+        for (let i = gap; i < length; i++) {
+          for (let j = i; 0 < j; j -= gap) {
+            if (this[j - gap] > this[j]) {
+              swap(this, j - gap, j)
+            } else {
+              break
+            }
+          }
+        }
+        gap = Math.floor(gap / 2)
+      }
+  
+      return this
+    }
+    
+    a = a.shellSort()
+
+  </script>
+</body>
+</html>
